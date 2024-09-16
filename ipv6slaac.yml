@@ -21,9 +21,9 @@ topology:
     router2:
       kind: linux
       image: quay.io/frrouting/frr:8.4.1
-      binds:
-        - router2/daemons:/etc/frr/daemons
-        - router2/frr.conf:/etc/frr/frr.conf
+      #binds:
+       # - router2/daemons:/etc/frr/daemons
+       # - router2/frr.conf:/etc/frr/frr.conf
       exec:
        - "sysctl -w net.ipv6.conf.all.forwarding=1"
 
